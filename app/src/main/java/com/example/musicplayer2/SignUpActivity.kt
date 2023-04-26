@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import com.example.musicplayer2.databinding.ActivitySignUpBinding
 import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 class SignUpActivity : AppCompatActivity() {
 
@@ -28,7 +29,24 @@ class SignUpActivity : AppCompatActivity() {
 
             if (name.isEmpty() || email.isEmpty() || password.isEmpty() || uniqueId.isEmpty()) {
                 Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show()
+            } else {
+                val user = User(name, email, password, uniqueId)
+                database = FirebaseDatabase.getInstance().getReference("Users")
+                database.child(uniqueId).setValue(user).addOnSuccessListener {
+
+                    binding.etName.text?.clear()
+                    binding.etEmail.text?.clear()
+                    binding.etPassward.text?.clear()
+                    binding.etUniqeId.text?.clear()
+
+                    Toast.makeText(this, "User logged In", Toast.LENGTH_SHORT).show()
+                }.addOnFailureListener {
+                    Toast.makeText(this, "Failed", Toast.LENGTH_SHORT).show()
+
+                }
             }
+
         }
     }
+
 }
