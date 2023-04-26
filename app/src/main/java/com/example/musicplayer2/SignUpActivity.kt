@@ -1,5 +1,6 @@
 package com.example.musicplayer2
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -39,7 +40,12 @@ class SignUpActivity : AppCompatActivity() {
                     binding.etPassward.text?.clear()
                     binding.etUniqeId.text?.clear()
 
-                    Toast.makeText(this, "User logged In", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "User Signed In", Toast.LENGTH_SHORT).show()
+
+
+                    val intent = Intent(this, LoginActivity::class.java)
+                    startActivity(intent)
+
                 }.addOnFailureListener {
                     Toast.makeText(this, "Failed", Toast.LENGTH_SHORT).show()
 
@@ -48,5 +54,7 @@ class SignUpActivity : AppCompatActivity() {
 
         }
     }
+
+
 
 }
