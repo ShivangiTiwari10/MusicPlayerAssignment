@@ -4,6 +4,6 @@
     <string name="enter_your_name">Enter Your Name</string>
     <string name="enter_your_email">Enter your Email</string>
     <string name="enter_your_unique_id">Enter your unique Id</string>
-    <string name="signup">SignUp</string>
+    <string name="signup">Sign Up</string>
     <string name="enter_password">Enter Password</string>
 </resources>
