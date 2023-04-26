@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Music Player2</string>
     <string name="todo">TODO</string>
+    <string name="enter_your_name">Enter Your Name</string>
+    <string name="enter_your_email">Enter your Email</string>
+    <string name="enter_your_unique_id">Enter your unique Id</string>
+    <string name="signup">SignUp</string>
+    <string name="enter_password">Enter Password</string>
 </resources>

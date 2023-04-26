@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         CoroutineScope(Dispatchers.Main).launch {
             delay(3000)
-            val intent = Intent(this@MainActivity, SignInActivity::class.java)
+            val intent = Intent(this@MainActivity, SignUpActivity::class.java)
             startActivity(intent)
             finish()
         }
