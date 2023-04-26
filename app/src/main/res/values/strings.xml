@@ -6,4 +6,8 @@
     <string name="enter_your_unique_id">Enter your unique Id</string>
     <string name="signup">Sign Up</string>
     <string name="enter_password">Enter Password</string>
+    <string name="email">Email</string>
+    <string name="password">password</string>
+    <string name="login">login</string>
+    <string name="don_t_have_an_account_sign_in">Don\'t have an Account Sign In</string>
 </resources>
