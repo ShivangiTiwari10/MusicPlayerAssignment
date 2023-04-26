@@ -3,8 +3,11 @@ package com.example.musicplayer2
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
 import com.example.musicplayer2.databinding.ActivityMainBinding
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -15,13 +18,13 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        supportActionBar?.hide()
-        Handler().postDelayed({
-
-            val intent = Intent(this, SignInActivity::class.java)
+        CoroutineScope(Dispatchers.Main).launch {
+            delay(3000)
+            val intent = Intent(this@MainActivity, SignInActivity::class.java)
             startActivity(intent)
             finish()
-        }, 3000)
+        }
     }
+
 
 }
