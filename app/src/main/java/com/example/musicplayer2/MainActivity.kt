@@ -17,7 +17,8 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        
+        supportActionBar?.hide()
         CoroutineScope(Dispatchers.Main).launch {
             delay(3000)
             val intent = Intent(this@MainActivity, SignUpActivity::class.java)
