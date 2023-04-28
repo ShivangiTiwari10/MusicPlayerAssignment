@@ -13,4 +13,6 @@
     <string name="enter_unique_id">Enter Unique Id</string>
     <string name="i_accept_all_terms_and_condition">I accept all terms and condition</string>
     <string name="sign_in">Sign In</string>
+    <string name="song_author">Song Author</string>
+    <string name="song_name">Song name</string>
 </resources>
